@@ -64,7 +64,7 @@ chatBox.innerHTML = '';
 // Creazione dei fumetti per i messaggi: FOR...OF
 
 for(const message of messages){
-    chatBox.innerHTML += 
+    chatBox.innerHTML += `
     <div class="chat-row ${message.type}">
                 <div class="chat-message">
                     <p>${message.text}</p>
@@ -72,7 +72,7 @@ for(const message of messages){
                         ${message.time}
                     </time>
                 </div>
-            </div>
+            </div>`
 }
 }
 
