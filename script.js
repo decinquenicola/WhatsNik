@@ -1,4 +1,4 @@
-console.log('I love you, S.')
+console.log('I love you, S.');
 // PUNTO E VIRGOLA NON OBBLIGATORIO
 
 // Si possono assegnare alle variabili proprio dei pezzi di pagina!
