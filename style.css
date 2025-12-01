@@ -21,6 +21,8 @@ h1{
     /* Si deve rispondere alla dimensione dello schermo (DVH!) */
     height: calc(100dvh - 140px);
     background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
     overflow-y: scroll;
 }
 
