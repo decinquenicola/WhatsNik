@@ -3,7 +3,7 @@ console.log('I love you, S.')
 
 // Si possono assegnare alle variabili proprio dei pezzi di pagina!
 
-// OPERAZIONI DI PREPARAZIONE
+// OPERAZIONI DI PREPARAZIONE:
 
 //Recupero elementi di interesse della pagina
 const input = document.querySelector('input')
