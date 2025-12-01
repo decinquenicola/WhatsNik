@@ -57,44 +57,35 @@ getAnswer()
 
 })
 
-function showMessages() {
-    chatBox.innerHTML = '';
+function showMessages(){
+       // ole ole ole ole Svuoto la chattt
+chatBox.innerHTML = '';
 
-    for (const message of messages) {
-        chatBox.innerHTML += `
-        <div class="chat-row ${message.type}">
-            <div class="chat-message">
-                <div class="message-content">
-                    ${message.html}
+// Creazione dei fumetti per i messaggi: FOR...OF
+
+for(const message of messages){
+    chatBox.innerHTML += 
+    <div class="chat-row ${message.type}">
+                <div class="chat-message">
+                    <p>${message.text}</p>
+                    <time datetime="${message.time}">
+                        ${message.time}
+                    </time>
                 </div>
-                <time datetime="${message.time}">
-                    ${message.time}
-                </time>
             </div>
-        </div>`;
-    }
+}
 }
 
 function addMessage(messageType, messageText){
-    // Converti testo → HTML (con Markdown)
-    const html = marked.parse(messageText, {
-        breaks: true,  // mantiene gli "invio"
-        gfm: true
-    });
-
     const newMessage = {
-        type: messageType,
-        raw: messageText,   // se vuoi conservare l'originale
-        html: html,         // quello che userai per mostrare
+        type : messageType,
+        text: messageText,
         time: new Date().toLocaleString()
-    };
+    }
 
-    messages.push(newMessage);
+    messages.push(newMessage)
 
-    showMessages();
-
-    // Attiva MathJax per convertire formule nel DOM
-    MathJax.typeset();
+ showMessages()
 }
 
 // IMPLEMENTAZIONE AI
